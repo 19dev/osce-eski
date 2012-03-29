@@ -7,8 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="home">ANASAYFA</a>
+    <!--  <ul class="nav">
+        <li class="active">
+        <a href="home">Anasayfa</a>
+        </li>
+      </ul>-->
+    </div>
+  </div>
+</div>
+<div class="container">
+  <%= yield %>
+<footer>
+<hr>
+Aşkın Gedik 
+</footer>
+</div>
 </body>
 </html>
