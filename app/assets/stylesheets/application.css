@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
 */
+
+body {
+      background: url("/assets/bg.jpg") repeat;
+      padding:60px 0;
+      text-align:center;
+      }

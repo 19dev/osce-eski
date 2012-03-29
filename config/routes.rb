@@ -1,4 +1,14 @@
 Q::Application.routes.draw do
+  get "author/login"
+
+  get "editor/login"
+
+  get "user/login"
+
+  get "admin/login"
+
+  get "admin/index"
+
   get "home/index"
   root :to => 'home#index'
   match "home" => "home#index"

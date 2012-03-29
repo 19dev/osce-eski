@@ -7,14 +7,18 @@
 <div class = "row" >
     <div class="span3">
 	    <h4>Öğrenci modunda giriş yaparak Nesnel Yapılandırılmış Klinik Sınav sorularını çözmeye başlayabilirsiniz.</h4>
-	    <p><a href="#" class="btn btn-primary">Öğrenci Modu</a></p></div>
+	    <p><%= link_to "Öğrenci Modu",user_login_path, :class => "btn btn-primary" %>
+    </div>
     <div class="span3">
 	    <h4>Editör modunda giriş yaparak sınav sorularını sisteme girebilir silebilir ve düzenlemeler yapabilirsiniz.</h4>
-	    <p><a href="#" class="btn btn-primary">Editor Modu</a></p></div>
+	    <p><%= link_to "Editor Modu",editor_login_path, :class => "btn btn-primary" %>
+    </div>
     <div class="span3">
-	    <h4>Admin modunda giriş yaparak kullanıcıları ekleyebilir güncelleştirebilir veya silebilirsiniz.</h4><p>
-	    <a href="#" class="btn btn-primary">Admin Modu</a></p></div>
+	    <h4>Admin modunda giriş yaparak kullanıcıları ekleyebilir güncelleştirebilir veya silebilirsiniz.</h4>
+	    <p><%= link_to "Admin Modu",admin_login_path, :class => "btn btn-primary" %>
+    </div>
     <div class="span3">
 	    <h4>Juri modunda giriş yaparak sorulara verilen cevaplara uygun puanlamalar yapabilirsiniz.</h4>
-	    <a href="#" class="btn btn-primary">Juri Modu</a></p></div>
+	    <p><%= link_to "Juri Modu",author_login_path, :class => "btn btn-primary" %>
+    </div>
 </div>
