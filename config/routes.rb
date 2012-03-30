@@ -1,4 +1,6 @@
 Q::Application.routes.draw do
+  resources :posts
+
   get "author/login"
 
   get "editor/login"
