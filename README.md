@@ -2,8 +2,10 @@
 
 # Nasıl?
 
-Çalışmamda amacım bir login sayfasıyla erişilebilen blog yapmak. Bununla alakalı
-bir `login` dalı oluşturmakla başladım,
+Çalışmamda amacım bir login sayfasıyla erişilebilen blog yapmak. Agile
+ilerleyeceğim, küçük ama çevik adımlar.
+
+Bununla alakalı bir `login` dalı oluşturmakla başladım,
 
 	$ cd osce/
 	$ git checkout master
@@ -30,6 +32,13 @@ Test etmek için sunucuyu başlatalım,
 burada `1.2.3.4` sanal makinenin IP adresi, host/fiziksel makinede web
 tarayıcıyı açalım ve http://1.2.3.4:3001/posts adresine gidelim, CRUD imkanımız
 var fakat herkes bunu yapabilir henüz login olanağımız yok.
+
+Bu adımı commitleyelim,
+
+	$ git add .
+	$ git commit -a -m "scaffold:posts"
+
+
 
 # Kaynaklar
 
