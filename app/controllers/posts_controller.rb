@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   # GET /posts
   # GET /posts.json
   def index
@@ -41,6 +42,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
@@ -57,6 +59,7 @@ class PostsController < ApplicationController
   # PUT /posts/1.json
   def update
     @post = Post.find(params[:id])
+    @post.user = current_user
 
     respond_to do |format|
       if @post.update_attributes(params[:post])

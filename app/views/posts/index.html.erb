@@ -4,7 +4,7 @@
   <tr>
     <th>Title</th>
     <th>Content</th>
-    <th></th>
+    <th>Owner</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,13 +13,22 @@
   <tr>
     <td><%= post.title %></td>
     <td><%= post.content %></td>
+    <td><%= post.user.username %></td>
     <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+
+    <% if can? :edit, post %>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <% end %>
+    <% if can? :destroy, post %>
+      <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+<% if can? :create, Post %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
+
