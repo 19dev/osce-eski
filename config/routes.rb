@@ -1,4 +1,7 @@
 Q::Application.routes.draw do
+  resources :sessions
+  get "login" => "sessions#new", :as => "login"
+
   resources :posts
 
   get "author/login"
